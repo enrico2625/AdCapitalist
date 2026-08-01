@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7749762325963201066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4198342717317473519}
+  - component: {fileID: 2986464173492600537}
+  m_Layer: 0
+  m_Name: BootLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4198342717317473519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749762325963201066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.20697, y: -0.98236, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2986464173492600537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749762325963201066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db19e882ff009c6468ddae2128c426c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BootLoader
+  BuisnessDataList:
+  - name: 0
+    IncomeProduced: 1
+    DelayProduceAction: 5
+    Coefficient: 1.2
+    CurrentPrice: 5
+  - name: 1
+    IncomeProduced: 3
+    DelayProduceAction: 2
+    Coefficient: 1.3
+    CurrentPrice: 101
+  - name: 2
+    IncomeProduced: 5
+    DelayProduceAction: 3
+    Coefficient: 1.4
+    CurrentPrice: 1000
+  - name: 3
+    IncomeProduced: 8
+    DelayProduceAction: 5
+    Coefficient: 1.5
+    CurrentPrice: 2000
+  - name: 4
+    IncomeProduced: 10
+    DelayProduceAction: 6
+    Coefficient: 1.6
+    CurrentPrice: 3000
+  - name: 5
+    IncomeProduced: 14
+    DelayProduceAction: 7
+    Coefficient: 1.7
+    CurrentPrice: 5000
+  - name: 6
+    IncomeProduced: 20
+    DelayProduceAction: 8
+    Coefficient: 1.8
+    CurrentPrice: 7000
+  - name: 7
+    IncomeProduced: 30
+    DelayProduceAction: 11
+    Coefficient: 1.9
+    CurrentPrice: 9000
+  - name: 8
+    IncomeProduced: 500
+    DelayProduceAction: 15
+    Coefficient: 2
+    CurrentPrice: 10000
+  - name: 9
+    IncomeProduced: 150
+    DelayProduceAction: 3
+    Coefficient: 1.4
+    CurrentPrice: 1000
+  prefabUi: {fileID: 4209941684714236056, guid: f0d147fda9bcbb8408dd69a4dc91a20c, type: 3}
