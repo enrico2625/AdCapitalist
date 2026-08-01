@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using BreakInfinity;
 using UnityEngine;
 
 public class Bonus
@@ -8,9 +9,9 @@ public class Bonus
     public string Name;
     public BuisnessEnum Buisness;
     public TargetParameterEnum TargetParameter;
-    public int Price;
+    public BigDouble Price;
     public bool isObtained = false;
-    public int value;
+    public BigDouble value;
 
     public Bonus(BonusTypeEnum type, string name, BuisnessEnum buisness, TargetParameterEnum targetParameter, int price, int value)
     {
