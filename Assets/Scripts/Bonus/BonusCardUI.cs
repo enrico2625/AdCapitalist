@@ -35,7 +35,7 @@ public class BonusCardUI : MonoBehaviour
         }
         if (bonus.type == BonusTypeEnum.Upgrade)
         {
-            bonusEffectText.SetText("profit x" + bonus.value);
+            bonusEffectText.SetText("profit x" + bonus.multiplier);
         }
         ChangeColor();
     }
