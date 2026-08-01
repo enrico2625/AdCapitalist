@@ -74,7 +74,7 @@ public class BuisnessCardUI : MonoBehaviour
             buisness.branchPurched();
             BranchCounterText.SetText(buisness.BranchCounter.ToString() + "/100");
             BranchPriceText.SetText(buisness.PriceNextBranche.ToString());
-            BranchCounterBar.value = buisness.BranchCounter;
+            BranchCounterBar.value = (float) buisness.BranchCounter.ToDouble();
         }
 
     }
@@ -120,34 +120,6 @@ public class BuisnessCardUI : MonoBehaviour
 
         animationManager.stopAnimation();
     }
-
-
-    /*
-    private IEnumerator CountdownCoroutine()
-    {
-        float decrement = Time.deltaTime;
-        float current = buisness.DelayProduceAction;
-        ProduceButton.interactable = false;
-        ProduceActionBar.maxValue = current;
-        ProduceActionBar.value = 0;
-        animationManager.startAnimation(current);
-
-        while (current > 0)
-        {
-            DeleyText.SetText(current.ToString("F2"));
-            ProduceActionBar.value+= decrement;
-            yield return new WaitForSeconds(decrement);
-            current-= decrement;
-        }
-
-        ProduceActionBar.value = 0;
-        DeleyText.SetText(buisness.DelayProduceAction.ToString());
-        GameManagaer.Instance.ChangeMonney(buisness.IncomeProduced);
-        ProduceButton.interactable = true;
-        isDelay = false;
-        animationManager.stopAnimation();
-    }
-    */
 
     public void ActiveBuyBranch()
     {

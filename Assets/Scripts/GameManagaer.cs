@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using BreakInfinity;
 using UnityEngine;
 
 public class GameManagaer : MonoBehaviour
@@ -15,7 +16,7 @@ public class GameManagaer : MonoBehaviour
     public List<Bonus> Upgrades;
     public List<Bonus> Managers;
 
-    public int monney = 100;
+    public BigDouble monney = 100;
 
     private void Awake()
     {
@@ -44,7 +45,7 @@ public class GameManagaer : MonoBehaviour
         return BuinsessList.Find(b => b.name == name);
     }
 
-    public void ChangeMonney(int value)
+    public void ChangeMonney(BigDouble value)
     {
         monney += value;
         gameEvent.Raise();

@@ -7,14 +7,14 @@ using BreakInfinity;
 public class Buisness
 {
     public BuisnessEnum name;
-    public int startIncome;
-    public int IncomeProduced ;
+    public BigDouble startIncome;
+    public BigDouble IncomeProduced ;
     public int DelayProduceAction;
-    public float Coefficient;
-    public int CurrentPrice;
-    public int BranchCounter;
-    public int PriceNextBranche;
-    public int bonusIncome;
+    public BigDouble Coefficient;
+    public BigDouble CurrentPrice;
+    public BigDouble BranchCounter;
+    public BigDouble PriceNextBranche;
+    public BigDouble bonusIncome;
     public bool isManager;
 
 
@@ -34,7 +34,7 @@ public class Buisness
 
     private void calculatePriceNextBranch()
     {
-        PriceNextBranche = (int) Math.Round(CurrentPrice * Coefficient);
+        PriceNextBranche = BigDouble.Round(CurrentPrice * Coefficient);
     }
 
     public void branchPurched()
