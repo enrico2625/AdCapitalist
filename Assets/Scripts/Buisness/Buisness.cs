@@ -11,11 +11,12 @@ public class Buisness
     public BigDouble IncomeProduced ;
     public int DelayProduceAction;
     public BigDouble Coefficient;
-    public BigDouble CurrentPrice;
+    public BigDouble basePrice;
     public BigDouble BranchCounter;
     public BigDouble PriceNextBranche;
     public BigDouble bonusIncome;
     public bool isManager;
+    private BigDouble CurrentPrice;
 
 
     public Buisness(BuinsnessData data)
@@ -23,7 +24,8 @@ public class Buisness
         IncomeProduced = data.IncomeProduced;
         startIncome = data.IncomeProduced;
         DelayProduceAction = data.DelayProduceAction;
-        CurrentPrice = data.CurrentPrice;
+        basePrice = data.basePrice;
+        CurrentPrice = data.basePrice;
         Coefficient = data.Coefficient;
         name = data.name;
         BranchCounter = 0;
@@ -34,7 +36,8 @@ public class Buisness
 
     private void calculatePriceNextBranch()
     {
-        PriceNextBranche = BigDouble.Round(CurrentPrice * Coefficient);
+        CurrentPrice = Formulary.calculateCurrentPrice(basePrice, Coefficient, BranchCounter);
+        PriceNextBranche = Formulary.CalcolaNextPurchesCost(CurrentPrice, Coefficient, 1);
     }
 
     public void branchPurched()
@@ -47,15 +50,8 @@ public class Buisness
 
     public void calculatedIncomeProduced()
     {
-        calculatedBonusIncome();
-        IncomeProduced = startIncome * BranchCounter * bonusIncome;
-    }
-
-    public void calculatedBonusIncome()
-    {
         List<Bonus> bonusList = GameManagaer.Instance.GetBonusesByType(BonusTypeEnum.Upgrade);
-        bonusList = bonusList.Where(b => b.Buisness == name).ToList();
-        bonusIncome = 1 + bonusList.Count;
+        IncomeProduced = Formulary.calcolateProductionIncome(startIncome, BranchCounter, bonusList);
     }
 
 }
@@ -68,7 +64,7 @@ public class BuinsnessData
     public int IncomeProduced;
     public int DelayProduceAction;
     public float Coefficient;
-    public int CurrentPrice;
+    public int basePrice;
 }
 
 public static class BuisnessNameStringMapper

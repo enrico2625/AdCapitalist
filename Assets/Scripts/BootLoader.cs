@@ -35,9 +35,9 @@ public class BootLoader : MonoBehaviour
     {
         List<Bonus> bonusList = new List<Bonus>();
         int price = 50;
-        int upgradeIncrement = 1;
+        int upgradeIncrement = 2;
         BuisnessDataList.ForEach(b => {
-            price = (int)Math.Round(b.CurrentPrice * b.Coefficient);
+            price = (int)Math.Round(b.basePrice * b.Coefficient);
             Bonus bounus = new Bonus(
                 BonusTypeEnum.Manager,
                 "ManagerName",
