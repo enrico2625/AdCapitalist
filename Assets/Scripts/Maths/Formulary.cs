@@ -17,7 +17,6 @@ public static class Formulary
             (BigDouble.Pow(growthRate, amount) - 1) /
             (growthRate - 1);
 
-        Debug.Log("totalCost: " + totalCost);
         return totalCost;
     }
 
@@ -27,7 +26,6 @@ public static class Formulary
         if(multiplier == 0) multiplier= 1;
         BigDouble income = baseIncome * BranchCounter * multiplier;
 
-        Debug.Log("income: " + income);
         return income;
     }
 

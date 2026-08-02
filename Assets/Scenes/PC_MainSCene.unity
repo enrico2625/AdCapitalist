@@ -573,6 +573,7 @@ MonoBehaviour:
   monney:
     mantissa: 1
     exponent: 2
+  buyModeValue: 010000000a00000064000000
 --- !u!4 &2067750068
 Transform:
   m_ObjectHideFlags: 0

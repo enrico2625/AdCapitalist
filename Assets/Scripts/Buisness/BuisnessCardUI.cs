@@ -59,6 +59,9 @@ public class BuisnessCardUI : MonoBehaviour
         if (GameManagaer.Instance.monney < buisness.PriceNextBranche)
             BuyBranchButton.interactable = false;
         else BuyBranchButton.interactable = true;
+
+        if(BranchPriceText.text != buisness.PriceNextBranche.ToString())
+            BranchPriceText.SetText(buisness.PriceNextBranche.ToString());
     }
 
     private void OnEnable()

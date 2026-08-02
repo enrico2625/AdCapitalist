@@ -34,10 +34,10 @@ public class Buisness
         calculatePriceNextBranch();
     }
 
-    private void calculatePriceNextBranch()
+    public void calculatePriceNextBranch()
     {
         CurrentPrice = Formulary.calculateCurrentPrice(basePrice, Coefficient, BranchCounter);
-        PriceNextBranche = Formulary.CalcolaNextPurchesCost(CurrentPrice, Coefficient, 1);
+        PriceNextBranche = Formulary.CalcolaNextPurchesCost(CurrentPrice, Coefficient, GameManagaer.Instance.getBuyMode());
     }
 
     public void branchPurched()

@@ -18,6 +18,11 @@ public class GameManagaer : MonoBehaviour
 
     public BigDouble monney = 100;
 
+    [SerializeField]
+    private int[] buyModeValue = {1, 10, 100, 0};
+    private int buyModeIndex = 0;
+    private int currentBuyMode = 1;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -28,6 +33,24 @@ public class GameManagaer : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void setBuyMode()
+    {
+        buyModeIndex++;
+        if(buyModeIndex >= buyModeValue.Length)buyModeIndex = 0;
+        currentBuyMode = buyModeValue[buyModeIndex];
+
+        foreach (Buisness b in BuinsessList)
+        {
+            b.calculatePriceNextBranch();
+        }
+
+    }
+
+    public int getBuyMode()
+    {
+        return buyModeValue[buyModeIndex];
     }
 
     public List<Bonus> GetBonusesByType(BonusTypeEnum type)
