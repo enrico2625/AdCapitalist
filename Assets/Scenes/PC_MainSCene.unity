@@ -251,6 +251,46 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].basePrice
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[1].basePrice
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[2].basePrice
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[3].basePrice
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[4].basePrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[5].basePrice
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[6].basePrice
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[7].basePrice
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[8].basePrice
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[9].basePrice
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[3].Coefficient
       value: 1.5
       objectReference: {fileID: 0}
@@ -281,6 +321,10 @@ PrefabInstance:
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[0].CurrentPrice
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[1].CurrentPrice
@@ -382,6 +426,70 @@ PrefabInstance:
       propertyPath: BuisnessDataList.Array.data[9].DelayProduceAction
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[0].Coefficient
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[1].Coefficient
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[0].midBonus.count
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[0].topBonus.count
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[1].midBonus.count
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[1].topBonus.count
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[0].baseBonus.count
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[1].baseBonus.count
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[0].segmentBonusNumber
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[0].midBonus.multiplayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[0].topBonus.multiplayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[1].midBonus.multiplayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[1].topBonus.multiplayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[0].baseBonus.multiplayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.data[1].baseBonus.multiplayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4198342717317473519, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 539.5426
@@ -462,7 +570,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManagaer
   gameEvent: {fileID: 11400000, guid: e8fcda23939b53c48ac6e90196398ef6, type: 2}
   BuinsessList: []
-  monney: 7
+  monney:
+    mantissa: 1
+    exponent: 2
 --- !u!4 &2067750068
 Transform:
   m_ObjectHideFlags: 0

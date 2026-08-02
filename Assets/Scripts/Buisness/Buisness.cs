@@ -65,6 +65,7 @@ public class BuinsnessData
     public int DelayProduceAction;
     public float Coefficient;
     public int basePrice;
+    public BuisnessBonusData buisnessBonus;
 }
 
 public static class BuisnessNameStringMapper
