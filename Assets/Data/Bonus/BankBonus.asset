@@ -18,7 +18,7 @@ MonoBehaviour:
     baseCost: 10
     curveSegmentList:
     - TargetParameter: 0
-      Coefficient: 0
+      Coefficient: 2
       topBonus:
         count: 1
         multiplayer: 5

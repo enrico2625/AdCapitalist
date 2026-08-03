@@ -11,9 +11,9 @@ public class Bonus
     public TargetParameterEnum TargetParameter;
     public BigDouble Price;
     public bool isObtained = false;
-    public int multiplier;
+    public float multiplier;
 
-    public Bonus(BonusTypeEnum type, string name, BuisnessEnum buisness, TargetParameterEnum targetParameter, int price, int multiplier)
+    public Bonus(BonusTypeEnum type, string name, BuisnessEnum buisness, TargetParameterEnum targetParameter, BigDouble price, float multiplier)
     {
         this.type = type;
         this.Name = name;

@@ -18,7 +18,7 @@ MonoBehaviour:
     baseCost: 10
     curveSegmentList:
     - TargetParameter: 0
-      Coefficient: 0
+      Coefficient: 2
       topBonus:
         count: 1
         multiplayer: 1
@@ -34,7 +34,7 @@ MonoBehaviour:
     baseCost: 30
     curveSegmentList:
     - TargetParameter: 1
-      Coefficient: 0
+      Coefficient: 2
       topBonus:
         count: 0
         multiplayer: 0
@@ -46,6 +46,6 @@ MonoBehaviour:
         multiplayer: 0.9
   managers:
     name: 9
-    type: 0
+    type: 2
     baseCost: 2000
     curveSegmentList: []

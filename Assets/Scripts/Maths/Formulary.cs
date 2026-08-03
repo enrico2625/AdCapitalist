@@ -35,7 +35,7 @@ public static class Formulary
         foreach (var bonus in bonusLit)
         {
             if(bonus.isObtained)
-                total += bonus.multiplier;
+                total +=(int) bonus.multiplier;
         }
 
         return total;

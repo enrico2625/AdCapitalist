@@ -49,50 +49,60 @@ MonoBehaviour:
     IncomeProduced: 1
     DelayProduceAction: 5
     Coefficient: 1.2
-    CurrentPrice: 5
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 9457819a4d28f0740ac9e621b7bf7740, type: 2}
   - name: 1
     IncomeProduced: 3
     DelayProduceAction: 2
     Coefficient: 1.3
-    CurrentPrice: 101
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 258a8d1ff3be6ff42ace4a9e7a1dd3cc, type: 2}
   - name: 2
     IncomeProduced: 5
     DelayProduceAction: 3
     Coefficient: 1.4
-    CurrentPrice: 1000
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 34431d3759d4d7449b4ea11dd2dd268e, type: 2}
   - name: 3
     IncomeProduced: 8
     DelayProduceAction: 5
     Coefficient: 1.5
-    CurrentPrice: 2000
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 444fcc7b1060c434a9a6b8c4ea5dcf4d, type: 2}
   - name: 4
     IncomeProduced: 10
     DelayProduceAction: 6
     Coefficient: 1.6
-    CurrentPrice: 3000
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 9d8ee8862a6c1c0448f1f9e3784010ce, type: 2}
   - name: 5
     IncomeProduced: 14
     DelayProduceAction: 7
     Coefficient: 1.7
-    CurrentPrice: 5000
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 5b6cb428889beff47a8162bd006dab07, type: 2}
   - name: 6
     IncomeProduced: 20
     DelayProduceAction: 8
     Coefficient: 1.8
-    CurrentPrice: 7000
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 78b3e77ef5350b74994e4c8e89bdf8a8, type: 2}
   - name: 7
     IncomeProduced: 30
     DelayProduceAction: 11
     Coefficient: 1.9
-    CurrentPrice: 9000
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 36bf806079c4c2d409cdd4960aa17703, type: 2}
   - name: 8
     IncomeProduced: 500
     DelayProduceAction: 15
     Coefficient: 2
-    CurrentPrice: 10000
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 867cac5231f085843930817ac1d34163, type: 2}
   - name: 9
     IncomeProduced: 150
     DelayProduceAction: 3
     Coefficient: 1.4
-    CurrentPrice: 1000
+    basePrice: 0
+    buisnessBonus: {fileID: 11400000, guid: 087abdcee34bed94e9d4756d0cf1cd70, type: 2}
   prefabUi: {fileID: 4209941684714236056, guid: f0d147fda9bcbb8408dd69a4dc91a20c, type: 3}
