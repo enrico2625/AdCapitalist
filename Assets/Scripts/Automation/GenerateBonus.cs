@@ -181,7 +181,7 @@ public static class GenerateBonus
                         finalSequence.Add(midValue);
                         midNumber--;
 
-                        if (skipMidSequence <= 0 &&
+                        if ((skipMidSequence <= 0 || midNumber == 0) &&
                             topNumber > 0)
                         {
                             finalSequence.Add(topValue);
