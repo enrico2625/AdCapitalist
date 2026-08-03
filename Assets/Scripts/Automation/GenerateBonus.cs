@@ -30,7 +30,6 @@ public static class GenerateBonus
         foreach (bonusCurveSegment segment in bonusSegmentList)
         {
             List<float> multiplaierList =  GenerateBonusMultipierList(segment);
-            bool isFirst = true;
             BigDouble growthRate = segment.Coefficient;
             foreach (float multiplaier in multiplaierList)
             {
