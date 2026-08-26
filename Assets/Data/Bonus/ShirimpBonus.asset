@@ -36,10 +36,10 @@ MonoBehaviour:
     - TargetParameter: 1
       Coefficient: 2
       topBonus:
-        count: 0
+        count: 1
         multiplayer: 0
       midBonus:
-        count: 0
+        count: 1
         multiplayer: 0
       baseBonus:
         count: 6
@@ -48,4 +48,15 @@ MonoBehaviour:
     name: 5
     type: 2
     baseCost: 750
-    curveSegmentList: []
+    curveSegmentList:
+    - TargetParameter: 0
+      Coefficient: 0
+      topBonus:
+        count: 0
+        multiplayer: 0
+      midBonus:
+        count: 0
+        multiplayer: 0
+      baseBonus:
+        count: 0
+        multiplayer: 0

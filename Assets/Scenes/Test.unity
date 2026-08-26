@@ -152,13 +152,13 @@ MonoBehaviour:
     TargetParameter: 1
     Coefficient: 2
     topBonus:
-      count: 0
+      count: 1
       multiplayer: 5
     midBonus:
-      count: 0
+      count: 3
       multiplayer: 3
     baseBonus:
-      count: 1
+      count: 10
       multiplayer: 2
 --- !u!4 &1075088768
 Transform:
