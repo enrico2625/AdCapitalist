@@ -1,35 +1,57 @@
 using System;
 using System.Globalization;
 using System.Text;
+using BreakInfinity;
 
 public static class NumberFormatter
 {
     #region Public API
 
-    public static string FormatCompact(BigNumber number)
+    public static string FormatCompact(BigDouble number)
     {
         if (number.Mantissa == 0)
             return "0";
 
         if (number.Exponent < 3)
-            return FormatSmallNumber(number);
+        {
+            double value = number.Mantissa * Math.Pow(10, number.Exponent);
+            value = Math.Floor(value);
 
-        int suffixIndex = number.Exponent / 3;
+            return value.ToString("0", CultureInfo.InvariantCulture);
+        }
+
+        long suffixIndex = number.Exponent / 3;
+
+        // Mantissa riportata alla scala del suffisso
+        double mantissa = number.Mantissa;
+
+        // Approssimazione per difetto
+        mantissa = Math.Floor(mantissa);
+
         string suffix = SuffixGenerator.GetSuffix(suffixIndex);
 
-        return $"{FormatMantissa(number.Mantissa)} {suffix}";
+        return $"{mantissa:0} {suffix}";
     }
 
-    public static string FormatFull(BigNumber number)
+    public static string FormatFull(BigDouble number)
     {
         if (number.Mantissa == 0)
             return "0";
 
-        double value = number.Mantissa * Math.Pow(10, number.Exponent % 3);
+        long exponentRemainder = number.Exponent % 3;
 
-        string digits = value.ToString("N0", CultureInfo.InvariantCulture);
+        double value = number.Mantissa *
+                    Math.Pow(10, exponentRemainder);
 
-        int remainingExponent = number.Exponent - (number.Exponent % 3);
+        // Approssimazione per difetto
+        value = Math.Floor(value);
+
+        string digits = value.ToString(
+            "0",
+            CultureInfo.InvariantCulture
+        );
+
+        long remainingExponent = number.Exponent - exponentRemainder;
 
         if (remainingExponent == 0)
             return digits;
@@ -37,7 +59,8 @@ public static class NumberFormatter
         return $"{digits} {SuffixGenerator.GetSuffix(remainingExponent / 3)}";
     }
 
-    public static string FormatScientific(BigNumber number)
+
+    public static string FormatScientific(BigDouble number)
     {
         return $"{number.Mantissa:0.###}e{number.Exponent}";
     }
@@ -46,9 +69,10 @@ public static class NumberFormatter
 
     #region Formatting
 
-    private static string FormatSmallNumber(BigNumber number)
+    private static string FormatSmallNumber(BigDouble number)
     {
-        double value = number.Mantissa * Math.Pow(10, number.Exponent);
+        double value = number.Mantissa *
+                       Math.Pow(10, number.Exponent);
 
         if (value >= 100)
             return value.ToString("0", CultureInfo.InvariantCulture);
@@ -70,12 +94,8 @@ public static class NumberFormatter
         return mantissa.ToString("0.00", CultureInfo.InvariantCulture);
     }
 
-    public static FormattedNumber FormatUI(BigNumber number)
+    public static FormattedNumber FormatUI(BigDouble number)
     {
-        // Usa la tua logica già esistente.
-        // L'importante è restituire separatamente
-        // il numero e il suffisso.
-
         string formatted = FormatCompact(number);
 
         string[] parts = formatted.Split(' ');
@@ -86,14 +106,13 @@ public static class NumberFormatter
         return new FormattedNumber(parts[0], parts[1]);
     }
 
-
     #endregion
 
     #region Suffix Generator
 
     private static class SuffixGenerator
     {
-        public static string GetSuffix(int index)
+        public static string GetSuffix(long index)
         {
             if (index <= 0)
                 return "";
@@ -111,8 +130,8 @@ public static class NumberFormatter
                 return "T";
 
             // Dal 5 in poi:
-            // 5 = AA
-            // 6 = AB
+            // 5  = AA
+            // 6  = AB
             // ...
             // 30 = AZ
             // 31 = BA
@@ -124,7 +143,11 @@ public static class NumberFormatter
 
             do
             {
-                builder.Insert(0, (char)('A' + (index % 26)));
+                builder.Insert(
+                    0,
+                    (char)('A' + (index % 26))
+                );
+
                 index /= 26;
                 index--;
             }

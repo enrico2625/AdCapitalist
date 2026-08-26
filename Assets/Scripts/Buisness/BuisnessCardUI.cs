@@ -37,9 +37,9 @@ public class BuisnessCardUI : MonoBehaviour
     void Start()
     {
 
-        BranchCounterText.SetText(buisness.BranchCounter.ToString() + "/100");
-        ProduceActionText.SetText(buisness.IncomeProduced.ToString());
-        BranchPriceText.SetText(buisness.PriceNextBranche.ToString());
+        BranchCounterText.SetText(NumberFormatter.FormatCompact(buisness.BranchCounter));
+        ProduceActionText.SetText(NumberFormatter.FormatCompact(buisness.IncomeProduced));
+        BranchPriceText.SetText(NumberFormatter.FormatCompact(buisness.PriceNextBranche));
         DeleyText.SetText(buisness.DelayProduceAction.ToString());
         ProduceActionBar.maxValue = buisness.DelayProduceAction;
         ProduceActionBar.value = 0;
@@ -61,7 +61,7 @@ public class BuisnessCardUI : MonoBehaviour
         else BuyBranchButton.interactable = true;
 
         if(BranchPriceText.text != buisness.PriceNextBranche.ToString())
-            BranchPriceText.SetText(buisness.PriceNextBranche.ToString());
+            BranchPriceText.SetText(NumberFormatter.FormatCompact(buisness.PriceNextBranche));
     }
 
     private void OnEnable()
@@ -75,8 +75,8 @@ public class BuisnessCardUI : MonoBehaviour
         {
             GameManagaer.Instance.ChangeMonney(-buisness.PriceNextBranche);
             buisness.branchPurched();
-            BranchCounterText.SetText(buisness.BranchCounter.ToString() + "/100");
-            BranchPriceText.SetText(buisness.PriceNextBranche.ToString());
+            BranchCounterText.SetText(NumberFormatter.FormatCompact(buisness.BranchCounter));
+            BranchPriceText.SetText(NumberFormatter.FormatCompact(buisness.PriceNextBranche));
             BranchCounterBar.value = (float) buisness.BranchCounter.ToDouble();
         }
 
@@ -132,6 +132,6 @@ public class BuisnessCardUI : MonoBehaviour
     public void UpdateIcomeGeneratedText()
     {
         if(ProduceActionText != null && buisness != null)
-            ProduceActionText.SetText(buisness.IncomeProduced.ToString());
+            ProduceActionText.SetText(NumberFormatter.FormatCompact(buisness.IncomeProduced));
     }
 }
