@@ -18,8 +18,14 @@ public class BootLoader : MonoBehaviour
         GameManagaer.Instance.BuinsessList = createBuisnessList(BuisnessDataList);
         GameManagaer.Instance.BonusList = BuisnessBonusList;//createBonusList();
         Instantiate(prefabUi);
+        SaveManager.LoadGame(GameManagaer.Instance);
+        
     }
 
+    private void OnDestroy()
+    {
+        SaveManager.SaveGame(GameManagaer.Instance);
+    }
     public List<Buisness> createBuisnessList(List<BuinsnessData> dataList)
     {
         List<Buisness> buisnessList = new List<Buisness>();

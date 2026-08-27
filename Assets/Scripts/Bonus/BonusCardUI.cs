@@ -40,6 +40,14 @@ public class BonusCardUI : MonoBehaviour
         ChangeColor();
     }
 
+    public void Update()
+    {
+        if (bonus.isObtained)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
     private void OnEnable()
     {
             ChangeColor();
@@ -51,14 +59,16 @@ public class BonusCardUI : MonoBehaviour
         {
             GameManagaer.Instance.ChangeMonney(-bonus.Price);
             bonus.isObtained = true;
-            this.gameObject.SetActive(false);
-            GameManagaer.Instance.FindBuisnessByName(bonus.Buisness).calculatedIncomeProduced();
-
-            if (bonus.type == BonusTypeEnum.Manager)
-                GameManagaer.Instance.FindBuisnessByName(bonus.Buisness).isManager = true;
-
-
+            deactivetBonusUI();
         }
+    }
+
+    private void deactivetBonusUI()
+    {
+        this.gameObject.SetActive(false);
+        GameManagaer.Instance.FindBuisnessByName(bonus.Buisness).calculatedIncomeProduced();
+        if (bonus.type == BonusTypeEnum.Manager)
+            GameManagaer.Instance.FindBuisnessByName(bonus.Buisness).isManager = true;
     }
 
     public void ChangeColor()

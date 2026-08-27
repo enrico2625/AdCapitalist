@@ -12,6 +12,8 @@ public class Bonus
     public BigDouble Price;
     public bool isObtained = false;
     public float multiplier;
+    public int id;
+    public static int bonusCount = 0;
 
     public Bonus(BonusTypeEnum type, string name, BuisnessEnum buisness, TargetParameterEnum targetParameter, BigDouble price, float multiplier)
     {
@@ -22,6 +24,7 @@ public class Bonus
         this.Price = price;
         this.isObtained = false;
         this.multiplier = multiplier;
+        id = bonusCount++;
     }
 }
 
