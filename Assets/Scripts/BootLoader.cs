@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class BootLoader : MonoBehaviour
 {
+    [SerializeField] 
+    private bool loadSaveInEditor = false;
+
     [SerializeField]
     public List<BuinsnessData> BuisnessDataList;
     public List<Bonus> BuisnessBonusList;
@@ -18,7 +21,7 @@ public class BootLoader : MonoBehaviour
         GameManagaer.Instance.BuinsessList = createBuisnessList(BuisnessDataList);
         GameManagaer.Instance.BonusList = BuisnessBonusList;//createBonusList();
         Instantiate(prefabUi);
-        SaveManager.LoadGame(GameManagaer.Instance);
+        if(loadSaveInEditor)SaveManager.LoadGame(GameManagaer.Instance);
         
     }
 

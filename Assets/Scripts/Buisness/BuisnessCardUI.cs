@@ -27,6 +27,8 @@ public class BuisnessCardUI : MonoBehaviour
     private Buisness buisness;
     private bool isDelay = false;
 
+    private Bonus nextUnlock;
+
     public void Init(Buisness buisness)
     {
         this.buisness = buisness;
@@ -36,8 +38,7 @@ public class BuisnessCardUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-        BranchCounterText.SetText(NumberFormatter.FormatCompact(buisness.BranchCounter));
+        updateBranchBar();
         ProduceActionText.SetText(NumberFormatter.FormatCompact(buisness.IncomeProduced));
         BranchPriceText.SetText(NumberFormatter.FormatCompact(buisness.PriceNextBranche));
         DeleyText.SetText(buisness.DelayProduceAction.ToString());
@@ -69,15 +70,38 @@ public class BuisnessCardUI : MonoBehaviour
         UpdateIcomeGeneratedText();
     }
 
+    private void updateBranchBar()
+    {
+        nextUnlock = GameManagaer.Instance.FindNextUnlock(buisness.name);
+        if(nextUnlock == null) return;
+        BranchCounterBar.maxValue = (float)nextUnlock.Price.ToDouble();
+        updateBranchBarText();
+        
+    }
+
+    private void updateBranchBarText()
+    {
+        if(nextUnlock == null) return;
+        BranchCounterText.SetText(NumberFormatter.FormatCompact(buisness.BranchCounter) + " / " + (NumberFormatter.FormatCompact(nextUnlock.Price)));
+    }
+
     public void BuyBranch()
     {
         if (GameManagaer.Instance.monney >= buisness.PriceNextBranche)
         {
             GameManagaer.Instance.ChangeMonney(-buisness.PriceNextBranche);
             buisness.branchPurched();
-            BranchCounterText.SetText(NumberFormatter.FormatCompact(buisness.BranchCounter));
             BranchPriceText.SetText(NumberFormatter.FormatCompact(buisness.PriceNextBranche));
             BranchCounterBar.value = (float) buisness.BranchCounter.ToDouble();
+
+            if(nextUnlock != null && buisness.BranchCounter >= nextUnlock.Price)
+            {
+                nextUnlock.isObtained = true;
+                updateBranchBar();
+                buisness.calculatedIncomeProduced();
+            }
+
+            updateBranchBarText();
         }
 
     }

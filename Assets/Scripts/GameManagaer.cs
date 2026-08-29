@@ -76,6 +76,14 @@ public class GameManagaer : MonoBehaviour
         && b.TargetParameter == TargetParameterEnum.Income)).ToList();
     }
 
+    public Bonus FindNextUnlock(BuisnessEnum name)
+    {
+        return BonusList.Find(b => 
+        (b.Buisness == name 
+        && b.type == BonusTypeEnum.Unlock 
+        && b.isObtained == false));
+    }
+
     public void ChangeMonney(BigDouble value)
     {
         monney += value;
