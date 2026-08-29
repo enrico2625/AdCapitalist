@@ -68,6 +68,14 @@ public class GameManagaer : MonoBehaviour
         return BuinsessList.Find(b => b.name == name);
     }
 
+    public List<Bonus> FindBonusToCalculateIncome(BuisnessEnum name)
+    {
+        return BonusList.Where(b => 
+        (b.Buisness == name 
+        && b.type != BonusTypeEnum.Manager 
+        && b.TargetParameter == TargetParameterEnum.Income)).ToList();
+    }
+
     public void ChangeMonney(BigDouble value)
     {
         monney += value;

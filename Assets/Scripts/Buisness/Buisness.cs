@@ -50,7 +50,7 @@ public class Buisness
 
     public void calculatedIncomeProduced()
     {
-        List<Bonus> bonusList = GameManagaer.Instance.GetBonusesByType(BonusTypeEnum.Upgrade);
+        List<Bonus> bonusList = GameManagaer.Instance.FindBonusToCalculateIncome(name);
         IncomeProduced = Formulary.calcolateProductionIncome(startIncome, BranchCounter, bonusList);
     }
 
