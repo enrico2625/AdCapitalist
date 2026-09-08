@@ -10,12 +10,12 @@ public class BuyModeUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        buyModeText.text = GameManagaer.Instance.getBuyMode().ToString();
+        buyModeText.text = "X" + GameManagaer.Instance.getBuyMode().ToString();
     }
 
     public void OnButtonClick()
     {
         GameManagaer.Instance.setBuyMode();
-        buyModeText.text = GameManagaer.Instance.getBuyMode().ToString();
+        buyModeText.text = "X" + GameManagaer.Instance.getBuyMode().ToString();
     }
 }

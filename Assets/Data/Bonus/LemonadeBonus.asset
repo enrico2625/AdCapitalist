@@ -31,9 +31,9 @@ MonoBehaviour:
   unloks:
     name: 0
     type: 0
-    baseCost: 20
+    baseCost: 2
     curveSegmentList:
-    - TargetParameter: 1
+    - TargetParameter: 0
       Coefficient: 2
       topBonus:
         count: 1
@@ -43,7 +43,7 @@ MonoBehaviour:
         multiplayer: 0
       baseBonus:
         count: 6
-        multiplayer: 0.9
+        multiplayer: 2
   managers:
     name: 0
     type: 2

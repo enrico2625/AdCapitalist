@@ -5837,6 +5837,7 @@ MonoBehaviour:
   ProduceButton: {fileID: 3632563535950370766}
   BuyBranchButton: {fileID: 4568267428605381274}
   buisnessIcon: {fileID: 282189053625298583}
+  buisnessName: 0
   iconsFilePath: Img/businessPlants_icon
   animationManager: {fileID: 3472749520392303148}
 --- !u!114 &3472749520392303148
@@ -6055,7 +6056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39, y: -11.467}
+  m_AnchoredPosition: {x: 39, y: -15}
   m_SizeDelta: {x: 126.935, y: 22.934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6107989490153847694

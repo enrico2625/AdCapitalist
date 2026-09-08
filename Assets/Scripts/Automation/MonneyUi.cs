@@ -19,6 +19,6 @@ public class MonneyUi : MonoBehaviour
     public void UpdateMonneyText()
     {
         if(monneyText != null)
-            monneyText.SetText("$"+NumberFormatter.FormatFull(GameManagaer.Instance.monney));
+            monneyText.SetText(NumberFormatter.FormatFull(GameManagaer.Instance.monney));
     }
 }

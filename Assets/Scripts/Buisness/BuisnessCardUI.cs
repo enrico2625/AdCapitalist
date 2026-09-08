@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class BuisnessCardUI : MonoBehaviour
     public Button ProduceButton;
     public Button BuyBranchButton;
     public Image buisnessIcon;
+    public BuisnessEnum buisnessName;
 
     [SerializeField]
     public string iconsFilePath;
@@ -38,6 +40,10 @@ public class BuisnessCardUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if(buisness == null)
+        {
+            buisness = GameManagaer.Instance.FindBuisnessByName(buisnessName);
+        }
         updateBranchBar();
         ProduceActionText.SetText(NumberFormatter.FormatCompact(buisness.IncomeProduced));
         BranchPriceText.SetText(NumberFormatter.FormatCompact(buisness.PriceNextBranche));
