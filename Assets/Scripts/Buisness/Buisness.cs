@@ -42,7 +42,7 @@ public class Buisness
 
     public void branchPurched()
     {
-        BranchCounter++;
+        BranchCounter += GameManagaer.Instance.getBuyMode();
         CurrentPrice = PriceNextBranche;
         calculatePriceNextBranch();
         calculatedIncomeProduced();
