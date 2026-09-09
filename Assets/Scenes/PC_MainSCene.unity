@@ -212,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 6686199386642956690, guid: 1f47d7c35fcc814498fdb0184a5362b2, type: 3}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: loadSaveInEditor
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.size
