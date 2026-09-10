@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
@@ -25,6 +26,9 @@ public class BuisnessCardUI : MonoBehaviour
 
     [SerializeField]
     private BuisnessAnimationManager animationManager;
+
+    [SerializeField]
+    private float delayProduceAction = 1f;
 
     private Buisness buisness;
     private bool isDelay = false;
@@ -60,7 +64,13 @@ public class BuisnessCardUI : MonoBehaviour
         if (buisness.BranchCounter > 0 && buisness.isManager && !isDelay)
         {
             isDelay = true;
-            StartCoroutine(CountdownCoroutine());
+
+            StartCoroutine(TimerCoroutine(
+                delayProduceAction,
+                remaining => Debug.Log(remaining),
+                () => StartCoroutine(CountdownCoroutine())
+            ));
+            
         }
 
         if (GameManagaer.Instance.monney < buisness.PriceNextBranche)
@@ -117,10 +127,79 @@ public class BuisnessCardUI : MonoBehaviour
         if(buisness.BranchCounter > 0 && !isDelay && !buisness.isManager)
         {
             isDelay = true;
+            //StartCoroutine(CountdownCoroutine());
             StartCoroutine(CountdownCoroutine());
         }
     }
 
+    public void ActiveBuyBranch()
+    {
+        BuyBranchButton.interactable = true;
+    }
+
+    public void UpdateIcomeGeneratedText()
+    {
+        if(ProduceActionText != null && buisness != null)
+            ProduceActionText.SetText(NumberFormatter.FormatCompact(buisness.IncomeProduced));
+    }
+
+//TIMER
+private IEnumerator TimerCoroutine(float duration, Action<float> onUpdate, Action onComplete)
+{
+    float elapsed = 0f;
+
+    while (elapsed < duration)
+    {
+        elapsed += Time.deltaTime;
+
+        float remaining = Mathf.Max(0f, duration - elapsed);
+
+        onUpdate?.Invoke(remaining);
+
+        yield return null;
+    }
+
+    onComplete?.Invoke();
+}
+
+private IEnumerator CountdownCoroutine()
+{
+    float duration = buisness.DelayProduceAction;
+
+    ProduceButton.interactable = false;
+    ProduceActionBar.maxValue = duration;
+    ProduceActionBar.value = 0;
+
+    animationManager.startAnimation(duration);
+
+    yield return StartCoroutine(
+        TimerCoroutine(
+            duration,
+
+            // Ogni frame
+            remaining =>
+            {
+                DeleyText.SetText(remaining.ToString("F2"));
+                ProduceActionBar.value = duration - remaining;
+            },
+
+            // Quando finisce
+            () =>
+            {
+                ProduceActionBar.value = 0;
+                DeleyText.SetText(duration.ToString());
+
+                GameManagaer.Instance.ChangeMonney(buisness.IncomeProduced);
+                ProduceButton.interactable = true;
+                isDelay = false;
+
+                animationManager.stopAnimation();
+            }
+        )
+    );
+}
+
+    /*
     private IEnumerator CountdownCoroutine()
     {
         float duration = buisness.DelayProduceAction;
@@ -153,15 +232,8 @@ public class BuisnessCardUI : MonoBehaviour
 
         animationManager.stopAnimation();
     }
+    */
 
-    public void ActiveBuyBranch()
-    {
-        BuyBranchButton.interactable = true;
-    }
-
-    public void UpdateIcomeGeneratedText()
-    {
-        if(ProduceActionText != null && buisness != null)
-            ProduceActionText.SetText(NumberFormatter.FormatCompact(buisness.IncomeProduced));
-    }
 }
+
+

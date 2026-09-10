@@ -43,8 +43,8 @@ public class BuisnessAnimationManager : MonoBehaviour
     {
         AnimationClip plantClip = plantAnimator.runtimeAnimatorController.animationClips[0];
         float plantAnimationLength = plantClip.length;
-        plantAnimator.speed = plantAnimationLength / deleyProduction;
- 
+        float animationSpeed = plantAnimationLength / deleyProduction;
+        plantAnimator.SetFloat("GrowthRate", animationSpeed);
         plantAnimator.SetBool("Producing", true);
         wateringAnimator.SetBool("Producing", true);
         particles.Play();
