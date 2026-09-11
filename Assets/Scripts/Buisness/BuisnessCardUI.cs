@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using BreakInfinity;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -35,6 +36,7 @@ public class BuisnessCardUI : MonoBehaviour
 
     private Bonus nextUnlock;
 
+    private bool deleteThis = false; //delete this
     public void Init(Buisness buisness)
     {
         this.buisness = buisness;
@@ -73,8 +75,20 @@ public class BuisnessCardUI : MonoBehaviour
             
         }
 
+
         if (GameManagaer.Instance.monney < buisness.PriceNextBranche)
+        {
             BuyBranchButton.interactable = false;
+            if(buisness.name == BuisnessEnum.Lemonade && !deleteThis)
+            {
+                deleteThis = true;
+                BigDouble monney = GameManagaer.Instance.monney;
+                BigDouble cost = buisness.PriceNextBranche;
+                Debug.Log("money: " + monney + " cost: " + cost);
+                Debug.Log("Monney, Mantissa: " + monney.Mantissa + " exponent: " + monney.Exponent);
+                Debug.Log("Cost, Mantissa: " + cost.Mantissa + " exponent: " + cost.Exponent);
+            }
+        }
         else BuyBranchButton.interactable = true;
 
         if(BranchPriceText.text != buisness.PriceNextBranche.ToString())

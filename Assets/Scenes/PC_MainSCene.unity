@@ -256,43 +256,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[0].basePrice
-      value: 5
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[1].basePrice
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[2].basePrice
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[3].basePrice
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[4].basePrice
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[5].basePrice
       value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[2].basePrice
+      value: 3600
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[3].basePrice
+      value: 43200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[4].basePrice
+      value: 518400
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[5].basePrice
+      value: 6220800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[6].basePrice
-      value: 450
+      value: 74649600
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[7].basePrice
-      value: 500
+      value: 895795200
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[8].basePrice
-      value: 750
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[9].basePrice
-      value: 1000
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[3].Coefficient
@@ -367,68 +367,84 @@ PrefabInstance:
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[2].IncomeProduced
+      propertyPath: BuisnessDataList.Array.data[0].IncomeProduced
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[1].IncomeProduced
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[2].IncomeProduced
+      value: 3600
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[3].IncomeProduced
-      value: 8
+      value: 21600
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[4].IncomeProduced
-      value: 10
+      value: 259200
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[5].IncomeProduced
-      value: 14
+      value: 3110400
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[6].IncomeProduced
-      value: 20
+      value: 37324800
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[7].IncomeProduced
-      value: 30
+      value: 447897600
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[8].IncomeProduced
-      value: 500
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[9].IncomeProduced
-      value: 150
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[0].DelayProduceAction
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[1].DelayProduceAction
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[3].DelayProduceAction
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[4].DelayProduceAction
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[5].DelayProduceAction
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[6].DelayProduceAction
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[7].DelayProduceAction
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
-      propertyPath: BuisnessDataList.Array.data[8].DelayProduceAction
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[2].DelayProduceAction
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[3].DelayProduceAction
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[4].DelayProduceAction
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[5].DelayProduceAction
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[6].DelayProduceAction
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[7].DelayProduceAction
+      value: 7680
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
+      propertyPath: BuisnessDataList.Array.data[8].DelayProduceAction
+      value: 30720
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[9].DelayProduceAction
-      value: 3
+      value: 184320
       objectReference: {fileID: 0}
     - target: {fileID: 2986464173492600537, guid: 144858672cb82ed44b0da37d84a30c4a, type: 3}
       propertyPath: BuisnessDataList.Array.data[0].Upgrade.curveSegmentList.Array.size
@@ -575,8 +591,8 @@ MonoBehaviour:
   gameEvent: {fileID: 11400000, guid: e8fcda23939b53c48ac6e90196398ef6, type: 2}
   BuinsessList: []
   monney:
-    mantissa: 20
-    exponent: 100
+    mantissa: 100
+    exponent: 0
   buyModeValue: 010000000a00000064000000
 --- !u!4 &2067750068
 Transform:
