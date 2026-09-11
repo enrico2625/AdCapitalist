@@ -591,8 +591,8 @@ MonoBehaviour:
   gameEvent: {fileID: 11400000, guid: e8fcda23939b53c48ac6e90196398ef6, type: 2}
   BuinsessList: []
   monney:
-    mantissa: 100
-    exponent: 0
+    mantissa: 2
+    exponent: 1
   buyModeValue: 010000000a00000064000000
 --- !u!4 &2067750068
 Transform:
